@@ -9,11 +9,22 @@ nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
 
-password=""
-for char in range(0,nr_letters):
-    password += random.choice(letters)
-for symbol in range(0,nr_symbols):
-    password += random.choice(symbols)
-for num in range(0,nr_numbers):
-    password += random.choice(numbers)
-print (password)
+password_list = []     #<--- created an empty list first.
+for char in range(0, nr_letters):
+    password_list.append(random.choice(letters))  #<--- each loop adds random characters to the empty list
+
+for char in range(0, nr_symbols):
+    password_list.append(random.choice(symbols))  #<--- each loop adds random characters to the empty list
+
+for char in range(0, nr_numbers):
+    password_list.append(random.choice(numbers))  #<--- each loop adds random characters to the empty list
+
+print(password_list)  #<--- this prints the list in the exact same way the elements are added
+random.shuffle(password_list)  #<--- randomly re-arranges the list with the same elements from previous
+print(password_list)
+
+password = ""  #<--- an empty string has been created to store the password later
+for char in password_list:
+    password += char
+
+print(f"Your password is: {password}")
