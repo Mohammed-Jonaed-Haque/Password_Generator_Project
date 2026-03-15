@@ -36,3 +36,9 @@ The program randomly generates passwords using a mix of uppercase letters, lower
 ## Example Output
 
 K9@aT2#pL7
+
+---
+
+👨‍💻 Author
+
+MOHAMMED JONAED HAQUE
